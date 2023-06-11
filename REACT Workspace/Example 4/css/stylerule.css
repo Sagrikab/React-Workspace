@@ -1,0 +1,33 @@
+#login-div{
+    border:3px solid darkred;
+    margin:10px 5px 10px 5px;
+    width:400px;
+    background-color: orange;
+    
+}
+
+.login-heading{
+    color:white;
+    background-color: darkblue;
+    padding:10px;
+    margin:0px;
+}
+
+.login-heading:hover{
+    color:yellow;
+}
+
+.form-label{
+    padding:0px;
+    margin:0px;
+    font:bold 10px 'calibri';
+}
+
+.login-body{
+    padding:10px;
+}
+
+.form-control{
+    border:1px solid;
+    width:100%;
+}

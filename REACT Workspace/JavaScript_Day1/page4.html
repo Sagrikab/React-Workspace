@@ -1,0 +1,49 @@
+<html>
+     <head>
+<title>Kilometers to Meters Length Converter</title>
+<script>
+function doMeters(){
+
+var kilometers = Number(document.getElementById("conv").value);
+var meters = kilometers * 1000;
+console.log(meters + " Meters");
+}
+function doCentimeters(){
+
+var kilometers = Number(document.getElementById("conv").value);
+var centimeter = kilometers * 100000;
+console.log(centimeter + " Centimeters");
+}
+function doInches(){
+
+var kilometers = Number(document.getElementById("conv").value);
+var inches = kilometers * 39370;
+console.log(inches + " Inches");
+}
+function doFeets(){
+
+var kilometers = Number(document.getElementById("conv").value);
+var feets = kilometers * 3280.8;
+console.log(feets + " Feets");
+}
+
+</script>
+</head>
+<body>
+<h1>JavaScript Task1:<span style="color:red;">Unit Converter</span></h1>
+
+<span>
+<h2>Enter distance in km <input type="text" id="conv"></h2>
+
+
+</span>
+</div>
+<br/><br/>
+<button onclick="doMeters()">Meters</button>
+<button onclick="doCentimeters()">Centimeters</button>
+<button onclick="doInches()">Inches</button>
+<button onclick="doFeets()">Feets</button>
+
+</body>
+</html>
+

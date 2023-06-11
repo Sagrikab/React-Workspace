@@ -1,0 +1,35 @@
+img{
+    padding: 15px;
+    width: 250px;
+    height: 180px;
+}
+.imagespharm{
+    width: 250px;
+    height: 100px;
+    padding: 0px;
+  
+}
+.button {
+    background-color: rgb(42, 149, 149);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-left:50px;
+    margin-top:1px;
+
+    
+  }
+ 
+.box{
+    border: 1px solid olive;
+    padding: 5px 5px;
+    margin:10px 10px;
+   
+}

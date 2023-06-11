@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>
+        JavaScript Age Calculator
+    </title>
+    <script>
+
+function calculateAge(target)
+
+{
+
+    // const now = new Date();
+
+    // const diff = Math.abs(now - date );
+
+    // const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+
+    
+    // console.log(age);
+    // return age
+
+      var dob = target.value.split("-");
+
+      var year = Number(dob[0]);
+
+      var age = 2022 - year;
+
+     document.getElementById("age").value = age;
+
+}
+
+function eligibilityCriteria(){
+                    var m=Number(document.getElementById("age").value);
+                    var name = document.getElementsByName('group1');
+              let gender;
+                    for(i=0;i<name.length;i++)
+                    {
+                        if(name[i].checked)
+                        {
+                           gender=name[i];
+                 
+                        }
+                    }
+                 
+                    if((m>25 && m<65) && (gender.value=="male"))
+                    {
+                    document.getElementById("output").innerHTML=" Eligible";
+                    }
+                    else if((m>21 && m<71) &&  (gender.value=="female"))
+                    {
+                    document.getElementById("output").innerHTML=" Eligible";
+                    }
+                    else
+                    {
+                    document.getElementById("output").innerHTML=" Not Eligible";
+                    }
+            }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h3>JavaScript Task2 : <span style="color:red ;"> Policy Checking </span></h3>
+
+    <br/>
+    <hr/>
+    <div class="main" style="display: flex">
+        <div class="box1" style="margin-right: 50px">
+
+        <div style="display:block;border: 1px solid black;margin-left:40px;width: 400px; margin-left: 40px;">
+            <h1 style="color:red;">Insurance Policy App</h1>
+
+            <b style="margin-left: 20px;">Employee Name</b>
+            <input type="text" style="margin-left:20px ; width: 80%;border: 2px solid black;" />
+            <br />
+            <h4 style="margin-left:20px ;"><b>Gender</b></h4>
+            <input type="radio" name="group1" id="r1" style="margin-left:20px ;"value="male">
+            <label for="r1">Male</label>
+
+            <input type="radio" name="group1" id="r2" value="female">
+            <label for="r2">Female</label>
+
+            <h4 style="margin-left:20px ;"><b>Date of Birth</b></h4>
+            <input type="date" style="margin-left:20px ; width: 60%;" oninput="calculateAge(this)" />
+            <br />
+            <h4 style="margin-left:20px ;"><b>Age</b></h4>
+            <input id="age" type="text" style="margin-left: 20px;width:60%; margin-bottom: 40px; "/>
+        </div>
+        <br />
+        <div>
+            <button style="margin-left:360px;width: 20%; " onclick="eligibilityCriteria()">Check</button>
+            
+        </div>
+    </div>
+<div class="box2" style="border-left: 1px solid black; padding:15px 15px">
+    <div style="padding: 10px 10px; border:1px solid gray;width: 130%;margin-left: 20px;">
+        <b>Eligibility Status:<span id="output"></b></span>
+    </div>
+    </div>
+</div>
+</body>
+
+</html>

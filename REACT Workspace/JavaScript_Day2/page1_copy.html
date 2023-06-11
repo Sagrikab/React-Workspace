@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Javascript Task2</title>
+        <link rel="stylesheet" href="./css/stylerule.css">
+        <script>
+            function calculateAge(target){
+                var dob = target.value.split("-");
+            var year = Number(dob[0]);
+            var age = 2022 - year;
+            document.getElementById("age").value = age;
+            
+            }
+            function eligibleCriteria(){
+                    var m=Number(document.getElementById("age").value);
+                    var name = document.getElementsByName('rad1');
+                    for(i=0;i<name.length;i++)
+                    {
+                        if(name[i].checked)
+                        {
+                            var gender=name[i];
+                        }
+                    }
+                 //   console.log(gender.value);
+                    if((m>25 && m<65) && ( gender.value=="male"))
+                    {
+                    document.getElementById("output").innerHTML="Eligible";
+                    }
+                    else if((m>21 && m<71) &&  (gender.value=="female"))
+                    {
+                    document.getElementById("output").innerHTML="Eligible";
+                    }
+                    else
+                    {
+                    document.getElementById("output").innerHTML="Not Eligible";
+                    }
+            }
+        </script>
+</head>
+<body>
+    <h3>JavaScript Task2 : <span style="color:red ;"> Policy Checking </span></h3>
+
+    <br/>
+    <hr/>
+    <div class="main" style="display: flex">
+        <div class="box1" style="margin-right: 50px">
+
+        <div style="display:block;border: 1px solid black;width: 400px; margin-left: 40px;">
+            <h1 style="color:red;">Insurance Policy App</h1>
+
+            <h4 style="margin-left:20px ;">Employee Name</h4>
+            <input type="text" style="margin-left:20px ;" />
+            <br />
+            <h4 style="margin-left:20px ;">Gender</h4>
+            <input type="radio" name="rad1"  style="margin-left:20px ;" value="male">
+            <label for="r1">Male</label>
+
+            <input type="radio" name="rad1"  value="female">
+            <label for="r2">Female</label>
+
+            <h4 style="margin-left:20px ;">Date of Birth</h4>
+            <input type="date" style="margin-left:20px ;" id="dob" onchange="calculateAge(this)"/>
+            <br />
+            <h4 style="margin-left:20px ;">Age</h4>
+            <input  id="age" type="text" />
+        </div>
+        <br />
+        <div>
+            <button style="margin-left:380px;" onclick="eligibleCriteria()">Check</button>
+        </div>
+    </div>
+<div class="box2" style="border-left: 1px solid black; padding:15px 15px">
+    <div class="innbox" style="padding: 10px 10px; border:1px solid gray">
+        Eligibility Status:<span id="output"></span>
+    </div>
+    
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body style="background-color: rgb(240, 240, 240)">
+  <div class="">
+    <h4>Enter Details</h4>
+    <div class="form-group">
+      <label for="state">Enter State:</label>
+      <input type="text" name="state" id="state">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="city">Enter City:</label>
+      <input type="text" name="city" id="city">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-sm btn-dark" onclick="addDate(data)">Submit</button>
+    </div>
+    <br>
+    <select name="states" id="states" onclick="addcity(data)">
+      <option value="None">Select State</option>
+    </select>
+    <select name="citys" id="citys">
+      <option value="None">Select City</option>
+    </select>
+  </div>
+  <script>
+    var data = [];
+
+    function addDate(data) {
+      var state = document.getElementById('state').value;
+      var city = document.getElementById('city').value;
+      var states = document.getElementById('states');
+      var citys = document.getElementById('citys');
+      data.push([state, city]);
+
+      states.innerHTML = "";
+      citys.innerHTML = "";
+
+      var addedstates = [];
+      for (let index = 0; index < data.length; index++) {
+        if (addedstates.indexOf(data[index][0]) == -1) {
+          addedstates.push(data[index][0]);
+          var option = document.createElement('option');
+          option.innerHTML = data[index][0];
+          states.add(option);
+        }
+      }
+    }
+    function addcity(data) {
+      var citys = document.getElementById('citys');
+      var states = document.getElementById('states');
+      var selectedstate = states.options[states.selectedIndex].text;
+      citys.innerHTML = "";
+      for (let index = 0; index < data.length; index++) {
+        if (data[index][0] == selectedstate) {
+          var option = document.createElement('option');
+          option.innerHTML = data[index][1];
+          citys.add(option);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

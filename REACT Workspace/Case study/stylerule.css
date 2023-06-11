@@ -1,0 +1,49 @@
+#login-div{
+    border:2px solid black;
+    margin:10px 5px 10px 5px;
+    width:400px;
+    background-color: white;
+    
+}
+
+.login-heading{
+    color:rgb(28, 159, 28);
+    background-color: white;
+    padding:10px;
+    margin:0px;
+}
+
+.login-heading:hover{
+    color:rgb(27, 108, 108);
+}
+
+.form-label{
+    padding:0px;
+    margin:0px;
+    font:bold 10px 'calibri';
+}
+
+.login-body{
+    padding:10px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.form-control{
+    border:1px solid;
+    width:100%;
+}
+.text1{
+    width: 350px;
+    height: 30px;
+    display: flex;
+    
+   
+    
+}
+
+
+#container{
+    text-align: center;
+}
+

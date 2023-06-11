@@ -1,0 +1,9 @@
+{
+    "menuitems":[
+        {"id":51, "menu":"Sandwitch", "price":"Rs.50", "discount":"Rs.5", "description":"Spicy", "stock":true},
+        {"id":52, "menu":"Pizza", "price":"Rs.250", "discount":"Rs.35", "description":"Medium Spicy", "stock":true},
+        {"id":53, "menu":"Cold Coffee", "price":"Rs.80", "discount":"Rs.10", "description":"Chocklate", "stock":true},
+        {"id":54, "menu":"Chinese Soup", "price":"Rs.150", "discount":"Rs.10", "description":"Sour", "stock":false},
+        {"id":55, "menu":"Cold Drink", "price":"Rs.40", "discount":"Rs.5", "description":"Cold", "stock":true}
+    ]
+}

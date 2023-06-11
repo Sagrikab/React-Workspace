@@ -1,0 +1,69 @@
+.dropdown{
+    color:darkblue;
+    font-weight: bold;
+    background-color:whitesmoke;
+}
+
+.text-comment{
+    color:red;
+    font-weight: bold;
+    margin:10px 100px 10px 100px;
+}
+
+#div-1{
+    border:2px solid darkblue;
+    margin:5px;
+    padding:10px;
+}
+
+.page-header{
+    background-color: red;
+    color:lightskyblue;
+    font:bold 24px 'arial black';
+    text-shadow:-1px -1px 2px lightgray;
+    padding:10px;
+}
+
+
+.page-header:hover{
+    color:yellow;
+}
+
+.btn{
+    border:none;
+    padding:10px;
+    font:bold 14px 'calibri';
+    color:white;
+    box-shadow: 2px 2px 2px grey;
+    margin:1px 5px 1px 5px;
+}
+
+.btn:hover{
+    cursor:pointer;
+    box-shadow: 3px 3px 3px darkgrey;
+    border-radius: 10px;
+}
+
+.w-1{
+    width:100px;
+}
+
+.w-2{
+    width:200px;
+}
+
+.w-3{
+    width:300px;
+}
+
+.success{
+    background-color:green;
+}
+
+.primary{
+    background-color: darkblue;
+}
+
+.danger{
+    background-color:red;
+}
